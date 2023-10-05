@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home de COVID-19</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div id="chart-container">
+        <canvas id="covid-chart"></canvas>
+    </div>
+
+    <script>
+        var labels = { labels2 };
+        var data = { data2 };
+
+        var ctx = document.getElementById('covid-chart').getContext('2d');
+        var chart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Casos de COVID-19 por Entidad',
+                    data: data,
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)', // Color de fondo de las barras
+                    borderColor: 'rgba(75, 192, 192, 1)', // Borde de las barras
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

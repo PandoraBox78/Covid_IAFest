@@ -1,0 +1,280 @@
+{% extends '../index_master.html'%}
+{% block content %}
+<div class="right_col" role="main">
+    <h1>Actualizar registro</h1>
+    <form action="actualizar" method="POST">
+        {% csrf_token%}
+        <div class="form-group row">
+            <label for="idregistro" class="col-4 col-form-label">ID de registro</label> 
+            <div class="col-8">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="fa fa-key"></i>
+                  </div>
+                </div> 
+                <input id="id" name="id" type="text" class="form-control" required="required">
+              </div>
+            </div>
+          </div>
+
+        <div class="form-group row">
+            <label for="fechaact" class="col-4 col-form-label">Fecha de actualización</label>
+            <div class="col-8">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <i class="fa fa-calendar"></i>
+                        </div>
+                    </div>
+                    <input id="fechaact" name="fechaact" type="date" class="form-control" required="required">
+                </div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="EntidadNac" class="col-4 col-form-label">Entidad Nacimiento</label>
+            <div class="col-8">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <i class="fa fa-map-marker"></i>
+                        </div>
+                    </div>
+                    <input id="EntidadNac" name="EntidadNac" type="number" class="form-control" required="required">
+                </div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="EntidadUM" class="col-4 col-form-label">Entidad Unidad Medica</label>
+            <div class="col-8">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <i class="fa fa-map-marker"></i>
+                        </div>
+                    </div>
+                    <input id="EntidadUM" name="EntidadUM" type="number" class="form-control" required="required">
+                </div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="entidad_res_id" class="col-4 col-form-label">Entidad Residencia ID</label>
+            <div class="col-8">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <i class="fa fa-map-marker"></i>
+                        </div>
+                    </div>
+                    <input id="entidad_res_id" name="entidad_res_id" type="number" class="form-control"
+                        required="required">
+                </div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="fecha_ingreso" class="col-4 col-form-label">Fecha de ingreso</label>
+            <div class="col-8">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <i class="fa fa-calendar"></i>
+                        </div>
+                    </div>
+                    <input id="fecha_ingreso" name="fecha_ingreso" type="date" class="form-control" required="required">
+                </div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="fehca_Sintomas" class="col-4 col-form-label">Fecha Sintomas</label>
+            <div class="col-8">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <i class="fa fa-calendar"></i>
+                        </div>
+                    </div>
+                    <input id="fecha_Sintomas" name="fecha_Sintomas" type="date" class="form-control"
+                        required="required">
+                </div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="fecha_def" class="col-4 col-form-label">Fecha de defunción</label>
+            <div class="col-8">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <i class="fa fa-calendar"></i>
+                        </div>
+                    </div>
+                    <input id="fecha_def" name="fecha_def" type="date" class="form-control">
+                </div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="intubado" class="col-4 col-form-label">Intubado</label>
+            <div class="col-8">
+                <input id="intubado" name="intubado" type="number" required="required" class="form-control">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="neumonia" class="col-4 col-form-label">Neumonia</label>
+            <div class="col-8">
+                <input id="neumonia" name="neumonia" type="number" required="required" class="form-control">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="edad" class="col-4 col-form-label">Edad</label>
+            <div class="col-8">
+                <input id="edad" name="edad" type="number" class="form-control" required="required">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="nacionalidad" class="col-4 col-form-label">Nacionalidad</label>
+            <div class="col-8">
+                <input id="nacionalidad" name="nacionalidad" type="number" class="form-control" required="required">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="embarazo" class="col-4 col-form-label">Embarazo</label>
+            <div class="col-8">
+                <input id="embarazo" name="embarazo" type="number" class="form-control" required="required">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="habla_lengua_indigena" class="col-4 col-form-label">Habla Lengua Indigena</label>
+            <div class="col-8">
+                <input id="habla_lengua_indigena" name="habla_lengua_indigena" type="number" class="form-control"
+                    required="required">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="diabetes" class="col-4 col-form-label">Diabetes</label>
+            <div class="col-8">
+                <input id="diabetes" name="diabetes" type="number" class="form-control" required="required">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="epoc" class="col-4 col-form-label">EPOC</label>
+            <div class="col-8">
+                <input id="epoc" name="epoc" type="number" class="form-control" required="required">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="asma" class="col-4 col-form-label">Asma</label>
+            <div class="col-8">
+                <input id="asma" name="asma" type="number" class="form-control" required="required">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inmusupr" class="col-4 col-form-label">Inmunosupresión</label>
+            <div class="col-8">
+                <input id="inmusupr" name="inmusupr" type="number" class="form-control" required="required">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="otra_com" class="col-4 col-form-label">Otra Complicación</label>
+            <div class="col-8">
+                <input id="otra_com" name="otra_com" type="number" class="form-control" required="required">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="cardiovascular" class="col-4 col-form-label">Cardiovascular</label>
+            <div class="col-8">
+                <input id="cardiovascular" name="cardiovascular" type="number" class="form-control" required="required">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="obesidad" class="col-4 col-form-label">Obesidad</label>
+            <div class="col-8">
+                <input id="obesidad" name="obesidad" type="number" class="form-control" required="required">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="renal cronica" class="col-4 col-form-label">Renal Cronica</label>
+            <div class="col-8">
+                <input id="renal cronica" name="renal cronica" type="number" class="form-control" required="required">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="tabaquismo" class="col-4 col-form-label">Tabaquismo</label>
+            <div class="col-8">
+                <input id="tabaquismo" name="tabaquismo" type="number" class="form-control" required="required">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="otro_caso" class="col-4 col-form-label">Otro caso</label>
+            <div class="col-8">
+                <input id="otro_caso" name="otro_caso" type="number" class="form-control" required="required">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="resultado" class="col-4 col-form-label">Resultado</label>
+            <div class="col-8">
+                <input id="resultado" name="resultado" type="number" class="form-control" required="required">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="migrante" class="col-4 col-form-label">Migrante</label>
+            <div class="col-8">
+                <input id="migrante" name="migrante" type="number" class="form-control" required="required">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="Pais_Nacionalidad" class="col-4 col-form-label">Pais Nacionalidad</label>
+            <div class="col-8">
+                <input id="Pais_Nacionalidad" name="Pais_Nacionalidad" type="number" class="form-control"
+                    required="required">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="pais_origen" class="col-4 col-form-label">País Origen</label>
+            <div class="col-8">
+                <input id="pais_origen" name="pais_origen" type="number" class="form-control" required="required">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="uci" class="col-4 col-form-label">UCI</label>
+            <div class="col-8">
+                <input id="uci" name="uci" type="number" class="form-control" required="required">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="municipio_res_id" class="col-4 col-form-label">Municipio Residencia ID</label>
+            <div class="col-8">
+                <input id="municipio_res_id" name="municipio_res_id" type="number" class="form-control"
+                    required="required">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="origen" class="col-4 col-form-label">Origen</label>
+            <div class="col-8">
+                <input id="origen" name="origen" type="number" class="form-control" required="required">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="sector" class="col-4 col-form-label">sector</label>
+            <div class="col-8">
+                <input id="sector" name="sector" type="number" class="form-control" required="required">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="sexo" class="col-4 col-form-label">Sexo</label>
+            <div class="col-8">
+                <input id="sexo" name="sexo" type="number" class="form-control" required="required">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="tipo_paciente" class="col-4 col-form-label">Tipo de paciente</label>
+            <div class="col-8">
+                <input id="tipo_paciente" name="tipo_paciente" type="number" class="form-control" required="required">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="offset-4 col-8">
+                <button name="submit" type="submit" class="btn btn-primary">Agregar Registro</button>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}

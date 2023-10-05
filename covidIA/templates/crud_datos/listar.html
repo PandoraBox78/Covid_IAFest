@@ -1,0 +1,91 @@
+{% extends '../index_master.html'%}
+{% block content %}
+<div class="right_col" role="main">
+    <h1>Lista registros</h1> 
+    <div class="table-responsive">
+        <table class="table table-striped table-sm ">
+          <thead>
+            <tr>
+              <th scope="col">Fecha actualización</th>
+              <th scope="col">ID de registro</th>
+              <th scope="col">Entidad nacimiento</th>
+              <th scope="col">Entidad UM</th>
+              <th scope="col">Entidad Residencia ID</th>
+              <th scope="col">Fecha ingreso</th>
+              <th scope="col">Fecha sintomas</th>
+              <th scope="col">Fecha de defuncion</th>
+              <th scope="col">Intubado</th>
+              <th scope="col">Neumonia</th>
+              <th scope="col">Edad</th>
+              <th scope="col">Nacionalidad</th>
+              <th scope="col">Embarazo</th>
+              <th scope="col">Habla lengua indigena</th>
+              <th scope="col">Diabetes</th>
+              <th scope="col">Epoc</th>
+              <th scope="col">Asma</th>
+              <th scope="col">Inmunosupresión</th>
+              <th scope="col">Otra complicación</th>
+              <th scope="col">Cardiovascular</th>
+              <th scope="col">Obesidad</th>
+              <th scope="col">Renal crónica</th>
+              <th scope="col">Tabaquismo</th>
+              <th scope="col">Otro caso</th>
+              <th scope="col">Resultado</th>
+              <th scope="col">Migrante</th>
+              <th scope="col">Pais nacionalidad</th>
+              <th scope="col">Pais Origen</th>
+              <th scope="col">UCI</th>
+              <th scope="col">Municipio Residencia ID</th>
+              <th scope="col">Origen</th>
+              <th scope="col">Sector</th>
+              <th scope="col">Sexo</th>
+              <th scope="col">Tipo de paciente</th>
+            </tr>
+          </thead>
+          <tbody>
+
+           {%for u in setDatos%} 
+            <tr>
+              <td>{{u.FECHA_ACTUALIZACION}}</td>
+              <td>{{u.ID_REGISTRO}}</td>
+              <td>{{u.ENTIDAD_UM}}</td>
+              <td>{{u.ENTIDAD_NAC}}</td>
+              <td>{{u.ENTIDAD_RES_id	}}</td>
+              <td>{{u.FECHA_INGRESO}}</td>
+              <td>{{u.FECHA_SINTOMAS}}</td>
+              <td>{{u.FECHA_DEF}}</td>
+              <td>{{u.INTUBADO}}</td>
+              <td>{{u.NEUMONIA}}</td>
+              <td>{{u.EDAD}}</td>
+              <td>{{u.NACIONALIDAD}}</td>
+              <td>{{u.EMBARAZO}}</td>
+              <td>{{u.DIABETES}}</td>
+              <td>{{u.EPOC}}</td>
+              <td>{{u.ASMA}}</td>
+              <td>{{u.INMUSUPR}}</td>
+              <td>{{u.HIPERTENSION}}</td>
+              <td>{{u.OTRA_COM}}</td>
+              <td>{{u.CARDIOVASCULAR}}</td>
+              <td>{{u.OBESIDAD}}</td>
+              <td>{{u.RENAL_CRONICA}}</td>
+              <td>{{u.TABAQUISMO}}</td>
+              <td>{{u.OTRO_CASO}}</td>
+              <td>{{u.RESULTADO}}</td>
+              <td>{{u.MIGRANTE}}</td>
+              <td>{{u.PAIS_NACIONALIDAD}}</td>
+              <td>{{u.PAIS_ORIGEN}}</td>
+              <td>{{u.UCI}}</td>
+              <td>{{u.MUNICIPIO_RES_id}}</td>
+              <td>{{u.ORIGEN}}</td>
+              <td>{{u.SECTOR}}</td>
+              <td>{{u.SEXO}}</td>
+              <td>{{u.TIPO_PACIENTE}}</td>
+            </tr>
+           {% endfor %} 
+
+          </tbody>
+      
+        </table>
+      </div>
+</div>
+{% endblock %}
